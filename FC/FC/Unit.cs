@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FC
 {
@@ -22,10 +18,7 @@ namespace FC
        }
        public override bool Equals(Object obj)
        {
-           // Check for null values and compare run-time types.
-           if (obj == null || GetType() != obj.GetType())
-               return false;
-
+           if (obj == null || GetType() != obj.GetType())return false;
            Unit p = (Unit)obj;
            return (value == p.value) && (degree == p.degree);
        }

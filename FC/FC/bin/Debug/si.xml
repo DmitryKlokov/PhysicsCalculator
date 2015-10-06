@@ -2,37 +2,114 @@
 <ArrayOfSI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SI>
     <main>
-      <value>Amper</value>
-      <degree>1</degree>
+      <Unit>
+        <value>Amper</value>
+        <degree>1</degree>
+      </Unit>
     </main>
-    <dochernie />
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
   </SI>
   <SI>
     <main>
-      <value>Om</value>
-      <degree>1</degree>
+      <Unit>
+        <value>Null</value>
+        <degree>4</degree>
+      </Unit>
     </main>
-    <dochernie />
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
   </SI>
   <SI>
     <main>
-      <value>Null</value>
-      <degree>1</degree>
+      <Unit>
+        <value>Volt</value>
+        <degree>1</degree>
+      </Unit>
     </main>
-    <dochernie />
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
   </SI>
   <SI>
     <main>
-      <value>Null</value>
-      <degree>2</degree>
+      <Unit>
+        <value>Null</value>
+        <degree>1</degree>
+      </Unit>
     </main>
-    <dochernie />
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
   </SI>
   <SI>
     <main>
-      <value>Null</value>
-      <degree>4</degree>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
     </main>
-    <dochernie />
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
+  </SI>
+  <SI>
+    <main>
+      <Unit>
+        <value>Null</value>
+        <degree>2</degree>
+      </Unit>
+    </main>
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
+  </SI>
+  <SI>
+    <main>
+      <Unit>
+        <value>Amper</value>
+        <degree>1</degree>
+      </Unit>
+    </main>
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
+  </SI>
+  <SI>
+    <main>
+      <Unit>
+        <value>Amper</value>
+        <degree>1</degree>
+      </Unit>
+    </main>
+    <dochernie>
+      <Unit>
+        <value>Om</value>
+        <degree>1</degree>
+      </Unit>
+    </dochernie>
   </SI>
 </ArrayOfSI>
