@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FC
+namespace PC
 {
     public class Value
     {
@@ -41,20 +41,20 @@ namespace FC
 
         public static Value FindFormula(Value v)
         {
-            for (int i = 0; i < Form1.LOp.Count; i++)//идем по всем формулам
+            for (int i = 0; i < Program.LOp.Count; i++)//идем по всем формулам
             {
-                if (Form1.LOp[i].lu.Count == v.unit.Count)//если количество переменных совпало
+                if (Program.LOp[i].lu.Count == v.unit.Count)//если количество переменных совпало
                 {
                     int count = 0;
                     for (int j = 0; j < v.unit.Count; j++)//ищем наши переменные в формуле
                     {
-                        if (Form1.LOp[i].lu.Contains(v.unit[j])) count++;
+                        if (Program.LOp[i].lu.Contains(v.unit[j])) count++;
                     }
 
                     if (count == v.unit.Count)//если все окей 
                     {
                         v.unit.Clear();
-                        v.unit.Add(Form1.LOp[i].result);
+                        v.unit.Add(Program.LOp[i].result);
                         break;
                     }
                 }
@@ -72,20 +72,20 @@ namespace FC
         }
         public static Value CheckValueInTheSI(Value v)
         {
-            for (int i = 0; i < Form1.LSi.Count; i++) //идем по всей таблице си и сравниваем наше значение с главными
+            for (int i = 0; i < Program.LSi.Count; i++) //идем по всей таблице си и сравниваем наше значение с главными
             {
-                 if (Form1.LSi[i].main == v.unit)
+                if (Program.LSi[i].main == v.unit)
                  {
                      return v;
                  }
              }
-             for (int i = 0; i < Form1.LSi.Count; i++)//ищем наше значение в дочерних
+            for (int i = 0; i < Program.LSi.Count; i++)//ищем наше значение в дочерних
              {
-                 foreach (Unit s in Form1.LSi[i].dochernie)
+                 foreach (Unit s in Program.LSi[i].dochernie)
                  {
                      if (s.value == v.unit[0].value)
                      {
-                         v.unit = Form1.LSi[i].main;//если нашлось то переводим
+                         v.unit = Program.LSi[i].main;//если нашлось то переводим
                          //надо добавить правило перевода!!!
                          return v; 
                      }

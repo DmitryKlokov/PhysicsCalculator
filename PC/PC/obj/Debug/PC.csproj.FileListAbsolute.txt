@@ -1,0 +1,6 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\bin\Debug\PC.exe.config
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\obj\Debug\PC.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\bin\Debug\PC.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\bin\Debug\PC.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\obj\Debug\PC.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\PC\PC\obj\Debug\PC.pdb
