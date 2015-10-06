@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ArrayOfSI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SI>
+    <main>
+      <value>Amper</value>
+      <degree>1</degree>
+    </main>
+    <dochernie />
+  </SI>
+  <SI>
+    <main>
+      <value>Om</value>
+      <degree>1</degree>
+    </main>
+    <dochernie />
+  </SI>
+  <SI>
+    <main>
+      <value>Null</value>
+      <degree>1</degree>
+    </main>
+    <dochernie />
+  </SI>
+  <SI>
+    <main>
+      <value>Null</value>
+      <degree>2</degree>
+    </main>
+    <dochernie />
+  </SI>
+  <SI>
+    <main>
+      <value>Null</value>
+      <degree>4</degree>
+    </main>
+    <dochernie />
+  </SI>
+</ArrayOfSI>

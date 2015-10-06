@@ -1,0 +1,9 @@
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\bin\Debug\FC.exe.config
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.Form1.resources
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.Properties.Resources.resources
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\bin\Debug\FC.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\bin\Debug\FC.pdb
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.exe
+C:\Users\Дмитрий\Documents\Visual Studio 2012\Projects\FC\FC\obj\Debug\FC.pdb
