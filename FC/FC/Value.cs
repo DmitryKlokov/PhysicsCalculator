@@ -11,14 +11,14 @@ namespace FC
 
         public static Value operator +(Value vLeft, Value vRight)
         {
-            if (compareTwiList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей +
+            if (compareTwoList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей +
             {
                 return new Value(vLeft.value + vRight.value, vLeft.unit);
             }
             else { throw new InvalidOperationException("Nevernoe virazenie(+)"); }
         }
 
-        private static bool compareTwiList(List<Unit> a, List<Unit> b)
+        private static bool compareTwoList(List<Unit> a, List<Unit> b)
         {
             if (a.Count != b.Count) return false; //если не равны размеры то сразу false
             int count = 0;
@@ -32,7 +32,7 @@ namespace FC
 
         public static Value operator - (Value vLeft, Value vRight)
         {
-            if (compareTwiList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей отнимаем
+            if (compareTwoList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей отнимаем
             {
                 return new Value(vLeft.value - vRight.value, vLeft.unit);
             }
@@ -83,7 +83,7 @@ namespace FC
              {
                  foreach (Unit s in Form1.LSi[i].dochernie)
                  {
-                     if (s == v.unit[0])
+                     if (s.value == v.unit[0].value)
                      {
                          v.unit = Form1.LSi[i].main;//если нашлось то переводим
                          //надо добавить правило перевода!!!
@@ -104,11 +104,13 @@ namespace FC
                 int index = FindSameUnit(vLeft, u.value); //поиск переменных с одинаковыми юнитами
                 if (index == -1)
                 {
+                    u.degree *= -1;
                     vLeft.unit.Add(u);//если не нашли то добавили к левой
                 }
                 else
                 {
                     vLeft.unit[index].degree-=u.degree;//если нашли то умен степень
+                    if (vLeft.unit[index].degree == 0) vLeft.unit.RemoveAt(index);
                 }
             }
             return FindFormula(vLeft);//ищем формулу в нашем выражении

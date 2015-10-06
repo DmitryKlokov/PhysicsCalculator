@@ -14,7 +14,7 @@ namespace FC
        }
        public override string ToString()
        {
-           return value + "^" + degree.ToString();
+           return "("+value+")" + "^" + degree.ToString();
        }
        public override bool Equals(Object obj)
        {

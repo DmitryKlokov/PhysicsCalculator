@@ -49,26 +49,15 @@ namespace FC
             //Serialize<Operations>("formula.xml", LOp);
         }
 
-        public bool checkedResult(Value v)
-        {
-            for (int i = 0; i < LSi.Count; i++) //идем по всей таблице си и сравниваем наше значение с главными
-            {
-                if (LSi[i].main == v.unit)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+
 
         private void button_calculate_Click(object sender, EventArgs e)
         {
-            var v1 = new Value(12, new List<Unit>() { new Unit("Amper", 1) });
-            var v2 = new Value(12, new List<Unit>() { new Unit("Om", 1) });
-            var v3 = new Value(12, new List<Unit>() { new Unit("Null", 2) });
-            var v4 = new Value(12, new List<Unit>() { new Unit("Null", 2) });
-            var v5 = v1 * v2 * v3 * v4;
-            if (checkedResult(v5)) 
+            var v1 = new Value(22, new List<Unit>() { new Unit("KMetr", 1) });                                        //Metr
+            var v2 = new Value(12, new List<Unit>() { new Unit("Sek", 1) });                                    //Sek             //Metr/Sek
+            var v3 = new Value(32, new List<Unit>() { new Unit("Metr/Sek", 1) });
+            var v5 = v1 / v2;
+            if (v5.unit.Count>1) 
             { 
                 throw new InvalidOperationException("Nevernoe virazenie (sami konec)"); 
             }

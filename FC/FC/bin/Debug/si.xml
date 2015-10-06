@@ -3,113 +3,53 @@
   <SI>
     <main>
       <Unit>
-        <value>Amper</value>
+        <value>Metr</value>
         <degree>1</degree>
       </Unit>
     </main>
     <dochernie>
       <Unit>
-        <value>Om</value>
+        <value>KMetr</value>
+        <degree>1</degree>
+      </Unit>
+	<Unit>
+        <value>SMetr</value>
         <degree>1</degree>
       </Unit>
     </dochernie>
-  </SI>
-  <SI>
-    <main>
+	
+ </SI>	
+<SI>
+	
+	<main>
       <Unit>
-        <value>Null</value>
-        <degree>4</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-  </SI>
-  <SI>
-    <main>
-      <Unit>
-        <value>Volt</value>
+        <value>Metr/Sek</value>
         <degree>1</degree>
       </Unit>
     </main>
     <dochernie>
       <Unit>
-        <value>Om</value>
+        <value>KMetr/H</value>
         <degree>1</degree>
       </Unit>
     </dochernie>
-  </SI>
-  <SI>
-    <main>
+	
+	 </SI>
+	<SI>
+	
+	<main>
       <Unit>
-        <value>Null</value>
+        <value>Sek</value>
         <degree>1</degree>
       </Unit>
     </main>
     <dochernie>
       <Unit>
-        <value>Om</value>
+        <value>H</value>
         <degree>1</degree>
       </Unit>
     </dochernie>
-  </SI>
-  <SI>
-    <main>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-  </SI>
-  <SI>
-    <main>
-      <Unit>
-        <value>Null</value>
-        <degree>2</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-  </SI>
-  <SI>
-    <main>
-      <Unit>
-        <value>Amper</value>
-        <degree>1</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-  </SI>
-  <SI>
-    <main>
-      <Unit>
-        <value>Amper</value>
-        <degree>1</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
+	
+	
   </SI>
 </ArrayOfSI>

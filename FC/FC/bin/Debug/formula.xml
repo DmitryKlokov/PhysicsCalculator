@@ -3,21 +3,52 @@
   <Operations>
     <lu>
       <Unit>
-        <value>Amper</value>
+        <value>Metr</value>
         <degree>1</degree>
       </Unit>
       <Unit>
-        <value>Om</value>
-        <degree>1</degree>
-      </Unit>
-      <Unit>
-        <value>Null</value>
-        <degree>4</degree>
+        <value>Sek</value>
+        <degree>-1</degree>
       </Unit>
     </lu>
     <result>
-      <value>Null</value>
-      <degree>4</degree>
+	   	<value>Metr/Sek</value>
+        <degree>1</degree>
     </result>
   </Operations>
+  
+  <Operations>
+    <lu>
+      <Unit>
+        <value>Metr</value>
+        <degree>1</degree>
+      </Unit>
+      <Unit>
+        <value>Metr/Sek</value>
+        <degree>-1</degree>
+      </Unit>
+    </lu>
+    <result>
+	   	<value>Sek</value>
+        <degree>1</degree>
+    </result>
+  </Operations>
+  
+    <Operations>
+    <lu>
+      <Unit>
+        <value>Sek</value>
+        <degree>1</degree>
+      </Unit>
+      <Unit>
+        <value>Metr/Sek</value>
+        <degree>1</degree>
+      </Unit>
+    </lu>
+    <result>
+	   	<value>Metr</value>
+        <degree>1</degree>
+    </result>
+  </Operations>
+  
 </ArrayOfOperations>
