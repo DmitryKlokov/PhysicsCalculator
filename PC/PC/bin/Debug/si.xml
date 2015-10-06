@@ -16,10 +16,30 @@
         <value>SMetr</value>
         <degree>1</degree>
       </Unit>
+    </dochernie>	
+   </SI>	
+
+  <SI>
+    <main>
+      <Unit>
+        <value>Kgram</value>
+        <degree>1</degree>
+      </Unit>
+    </main>
+    <dochernie>
+      <Unit>
+        <value>Gram</value>
+        <degree>1</degree>
+      </Unit>
+	<Unit>
+        <value>Tonna</value>
+        <degree>1</degree>
+      </Unit>
     </dochernie>
 	
  </SI>	
-<SI>
+
+	<SI>
 	
 	<main>
       <Unit>
@@ -32,9 +52,9 @@
         <value>KMetr/H</value>
         <degree>1</degree>
       </Unit>
-    </dochernie>
-	
+    </dochernie>	
 	 </SI>
+
 	<SI>
 	
 	<main>
@@ -48,6 +68,20 @@
         <value>H</value>
         <degree>1</degree>
       </Unit>
+    </dochernie>
+	
+	
+  </SI>
+
+	<SI>
+	
+	<main>
+      <Unit>
+        <value>Nioton</value>
+        <degree>1</degree>
+      </Unit>
+    </main>
+    <dochernie>
     </dochernie>
 	
 	

@@ -39,7 +39,7 @@ namespace PC
             else { throw new InvalidOperationException("Nevernoe virazenie(+)"); }
         }
 
-        public static Value FindFormula(Value v)
+        public static Value FindFormula(Value v)//!!!!!!!!!!!!!
         {
             for (int i = 0; i < Program.LOp.Count; i++)//идем по всем формулам
             {

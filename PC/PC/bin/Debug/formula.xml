@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <ArrayOfOperations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
   <Operations>
     <lu>
-      <Unit>
-        <value>Metr</value>
-        <degree>1</degree>
-      </Unit>
-      <Unit>
-        <value>Sek</value>
-        <degree>-1</degree>
-      </Unit>
+		<Unit>
+			<value>Metr</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+				<value>Sek</value>
+			<degree>-1</degree>
+		</Unit>
     </lu>
     <result>
 	   	<value>Metr/Sek</value>
@@ -19,14 +20,14 @@
   
   <Operations>
     <lu>
-      <Unit>
-        <value>Metr</value>
-        <degree>1</degree>
-      </Unit>
-      <Unit>
-        <value>Metr/Sek</value>
-        <degree>-1</degree>
-      </Unit>
+		<Unit>
+			<value>Metr</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Metr/Sek</value>
+			<degree>-1</degree>
+		</Unit>
     </lu>
     <result>
 	   	<value>Sek</value>
@@ -34,19 +35,57 @@
     </result>
   </Operations>
   
-    <Operations>
+  <Operations>
     <lu>
-      <Unit>
-        <value>Sek</value>
-        <degree>1</degree>
-      </Unit>
-      <Unit>
-        <value>Metr/Sek</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Sek</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Metr/Sek</value>
+			<degree>1</degree>
+		</Unit>
     </lu>
     <result>
 	   	<value>Metr</value>
+        <degree>1</degree>
+    </result>
+  </Operations>
+
+  <Operations>
+    <lu>
+		<Unit>
+			<value>Sek</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Metr/Sek</value>
+			<degree>1</degree>
+		</Unit>
+	</lu>
+    <result>
+	   	<value>Sek</value>
+        <degree>-1</degree>
+    </result>
+  </Operations>
+  
+  <Operations>
+    <lu>
+		<Unit>
+			<value>Kgram</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Metr/Sek</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Sek</value>
+			<degree>-1</degree>
+		</Unit>
+    </lu>
+    <result>
+	   	<value>Nioton</value>
         <degree>1</degree>
     </result>
   </Operations>
