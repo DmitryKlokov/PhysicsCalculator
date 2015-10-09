@@ -115,6 +115,7 @@ namespace PC
             }
             return FindFormula(vLeft);//ищем формулу в нашем выражении
         }
+
         public static Value operator *(Value vLeft, Value vRight)
         {
             vLeft = CheckValueInTheSI(vLeft);//проверяем нашу переменную на си

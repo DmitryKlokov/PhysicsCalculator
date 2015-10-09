@@ -1,89 +1,85 @@
 <?xml version="1.0"?>
 <ArrayOfSI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
   <SI>
     <main>
-      <Unit>
-        <value>Metr</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Metr</value>
+			<degree>1</degree>
+		</Unit>
     </main>
     <dochernie>
-      <Unit>
-        <value>KMetr</value>
-        <degree>1</degree>
-      </Unit>
-	<Unit>
-        <value>SMetr</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>KMetr</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>SMetr</value>
+			<degree>1</degree>
+		</Unit>
     </dochernie>	
-   </SI>	
+  </SI>	
 
   <SI>
     <main>
-      <Unit>
-        <value>Kgram</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Kgram</value>
+			<degree>1</degree>
+		</Unit>
     </main>
     <dochernie>
-      <Unit>
-        <value>Gram</value>
-        <degree>1</degree>
-      </Unit>
-	<Unit>
-        <value>Tonna</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-	
- </SI>	
-
-	<SI>
-	
-	<main>
-      <Unit>
-        <value>Metr/Sek</value>
-        <degree>1</degree>
-      </Unit>
-    </main>
-    <dochernie>
-      <Unit>
-        <value>KMetr/H</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Gram</value>
+			<degree>1</degree>
+		</Unit>
+		<Unit>
+			<value>Tonna</value>
+			<degree>1</degree>
+		</Unit>
     </dochernie>	
-	 </SI>
+</SI>	
 
 	<SI>
 	
 	<main>
-      <Unit>
-        <value>Sek</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Metr/Sek</value>
+			<degree>1</degree>
+		</Unit>
     </main>
     <dochernie>
-      <Unit>
-        <value>H</value>
-        <degree>1</degree>
-      </Unit>
-    </dochernie>
-	
-	
-  </SI>
+		<Unit>
+			<value>KMetr/H</value>
+			<degree>1</degree>
+		</Unit>
+    </dochernie>	
+</SI>
 
 	<SI>
 	
 	<main>
-      <Unit>
-        <value>Nioton</value>
-        <degree>1</degree>
-      </Unit>
+		<Unit>
+			<value>Sek</value>
+			<degree>1</degree>
+		</Unit>
     </main>
     <dochernie>
-    </dochernie>
-	
-	
+		<Unit>
+			<value>H</value>
+			<degree>1</degree>
+		</Unit>
+    </dochernie>	
   </SI>
+
+	<SI>	
+	<main>
+		<Unit>
+			<value>Nioton</value>
+			<degree>1</degree>
+		</Unit>
+    </main>
+    <dochernie>
+    </dochernie>	
+  </SI>
+  
 </ArrayOfSI>
