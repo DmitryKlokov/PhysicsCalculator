@@ -6,111 +6,93 @@ namespace PC
 {
     public class Value
     {
-        public double value;
-        public List<Unit> unit ;
+        private double _value;
+        public List<Unit> Unit ;
 
         public static Value operator +(Value vLeft, Value vRight)
         {
-            if (compareTwoList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей +
+            if (CompareTwoList(vLeft.Unit, vRight.Unit))//если единицы измерения совпали все окей +
             {
-                return new Value(vLeft.value + vRight.value, vLeft.unit);
+                return new Value(vLeft._value + vRight._value, vLeft.Unit);
             }
-            else { throw new InvalidOperationException("Nevernoe virazenie(+)"); }
+            throw new InvalidOperationException("Nevernoe virazenie(+)");
         }
 
-        private static bool compareTwoList(List<Unit> a, List<Unit> b)
+        private static bool CompareTwoList(ICollection<Unit> a, ICollection<Unit> b)
         {
             if (a.Count != b.Count) return false; //если не равны размеры то сразу false
-            int count = 0;
-            foreach (Unit u in a)
-            {
-                if (b.Contains(u)) count++; //если один содержит все элементы лругого
-            }
-            if (count == a.Count) return true;
-            else return false;
+            var count = a.Count(b.Contains);      //если один содержит все элементы лругого
+            return count == a.Count;
         }
 
         public static Value operator - (Value vLeft, Value vRight)
         {
-            if (compareTwoList(vLeft.unit, vRight.unit))//если единицы измерения совпали все окей отнимаем
+            if (CompareTwoList(vLeft.Unit, vRight.Unit))//если единицы измерения совпали все окей отнимаем
             {
-                return new Value(vLeft.value - vRight.value, vLeft.unit);
+                return new Value(vLeft._value - vRight._value, vLeft.Unit);
             }
-            else { throw new InvalidOperationException("Nevernoe virazenie(+)"); }
+            throw new InvalidOperationException("Nevernoe virazenie(+)");
         }
 
-        public static Value FindFormula(Value v)//!!!!!!!!!!!!!
+        public static Value FindFormula(Value v)
         {
-            for (int i = 0; i < Program.LOp.Count; i++)//идем по всем формулам
+            foreach (var t1 in Program.LOp)//идем по всем формулам
             {
-                if (Program.LOp[i].lu.Count == v.unit.Count)//если количество переменных совпало
-                {
-                    int count = 0;
-                    for (int j = 0; j < v.unit.Count; j++)//ищем наши переменные в формуле
-                    {
-                        if (Program.LOp[i].lu.Contains(v.unit[j])) count++;
-                    }
-
-                    if (count == v.unit.Count)//если все окей 
-                    {
-                        v.unit.Clear();
-                        v.unit.Add(Program.LOp[i].result);
-                        break;
-                    }
-                }
+                if (t1.Lu.Count != v.Unit.Count) continue;
+                //если количество переменных совпало
+                var count = v.Unit.Count(t => t1.Lu.Contains(t));//ищем наши переменные в формуле
+                if (count != v.Unit.Count) continue;
+                //если все окей 
+                v.Unit.Clear();
+                v.Unit.Add(t1.Result);
+                break;
             }
             return v;
         }
-        public static int FindSameUnit(Value v, String value)
+
+        public static int FindSameUnit(Value v, string value)
         {
-            for (int i = 0; i < v.unit.Count; i++)
+            for (var i = 0; i < v.Unit.Count; i++)
             {
-                if (v.unit[i].value == value)
+                if (v.Unit[i].Value == value)
                     return i;
             }
             return -1;
         }
-        public static Value CheckValueInTheSI(Value v)
+
+        public static Value CheckValueInTheSi(Value v)
         {
-            for (int i = 0; i < Program.LSi.Count; i++) //идем по всей таблице си и сравниваем наше значение с главными
+            if (Program.LSi.Any(t => t.Main == v.Unit))//идем по всей таблице си и сравниваем наше значение с главными
             {
-                if (Program.LSi[i].main == v.unit)
-                 {
-                     return v;
-                 }
-             }
-            for (int i = 0; i < Program.LSi.Count; i++)//ищем наше значение в дочерних
-             {
-                 foreach (Unit s in Program.LSi[i].dochernie)
-                 {
-                     if (s.value == v.unit[0].value)
-                     {
-                         v.unit = Program.LSi[i].main;//если нашлось то переводим
-                         //надо добавить правило перевода!!!
-                         return v; 
-                     }
-                 }
-             }
+                return v;
+            }
+            foreach (var t in Program.LSi.Where(t => t.Сhildren.Any(s => s.Value == v.Unit[0].Value)))
+            {
+                //если нашлось то переводим
+                //надо добавить правило перевода!!!
+                v.Unit = t.Main;
+                return v;
+            }
             return v;
         }
 
         public static Value operator /(Value vLeft, Value vRight)
         {
-            vLeft = CheckValueInTheSI( vLeft);//проверяем нашу переменную на си
-            vRight = CheckValueInTheSI( vRight);
-            vLeft.value = vLeft.value / vRight.value;//выполняем арифм операцию
-            foreach (Unit u in vRight.unit) //переносим все юниты в левую переменную
+            vLeft = CheckValueInTheSi( vLeft);//проверяем нашу переменную на си
+            vRight = CheckValueInTheSi( vRight);
+            vLeft._value = vLeft._value / vRight._value;//выполняем арифм операцию
+            foreach (var u in vRight.Unit) //переносим все юниты в левую переменную
             {
-                int index = FindSameUnit(vLeft, u.value); //поиск переменных с одинаковыми юнитами
+                var index = FindSameUnit(vLeft, u.Value); //поиск переменных с одинаковыми юнитами
                 if (index == -1)
                 {
-                    u.degree *= -1;
-                    vLeft.unit.Add(u);//если не нашли то добавили к левой
+                    u.Degree *= -1;
+                    vLeft.Unit.Add(u);//если не нашли то добавили к левой
                 }
                 else
                 {
-                    vLeft.unit[index].degree-=u.degree;//если нашли то умен степень
-                    if (vLeft.unit[index].degree == 0) vLeft.unit.RemoveAt(index);
+                    vLeft.Unit[index].Degree-=u.Degree;//если нашли то умен степень
+                    if (vLeft.Unit[index].Degree == 0) vLeft.Unit.RemoveAt(index);
                 }
             }
             return FindFormula(vLeft);//ищем формулу в нашем выражении
@@ -118,19 +100,19 @@ namespace PC
 
         public static Value operator *(Value vLeft, Value vRight)
         {
-            vLeft = CheckValueInTheSI(vLeft);//проверяем нашу переменную на си
-            vRight = CheckValueInTheSI(vRight);
-            vLeft.value = vLeft.value * vRight.value;//выполняем арифм операцию
-            foreach (Unit u in vRight.unit)//переносим все юниты в левую переменную
+            vLeft = CheckValueInTheSi(vLeft);//проверяем нашу переменную на си
+            vRight = CheckValueInTheSi(vRight);
+            vLeft._value = vLeft._value * vRight._value;//выполняем арифм операцию
+            foreach (var u in vRight.Unit)//переносим все юниты в левую переменную
             {
-                int index = FindSameUnit(vLeft, u.value);//поиск переменных с одинаковыми юнитами
+                var index = FindSameUnit(vLeft, u.Value);//поиск переменных с одинаковыми юнитами
                 if ( index == -1)
                 {
-                    vLeft.unit.Add(u);//если не нашли то добавили к левой
+                    vLeft.Unit.Add(u);//если не нашли то добавили к левой
                 }
                 else
                 {
-                    vLeft.unit[index].degree += u.degree;//если нашли то увел степень
+                    vLeft.Unit[index].Degree += u.Degree;//если нашли то увел степень
                 }
             }
             return FindFormula(vLeft);//ищем формулу в нашем выражении
@@ -138,16 +120,16 @@ namespace PC
 
         public Value()
         {
-            unit = new List<Unit>();
+            Unit = new List<Unit>();
         }
         public Value(double value, List<Unit> unit)
         {
-            this.value = value;
-            this.unit = unit;
+            _value = value;
+            Unit = unit;
         }
         public override string ToString()
         {
-            return value.ToString() + " " + unit[0].ToString();
+            return _value + " " + Unit[0];
         }
     }
 }

@@ -2,14 +2,14 @@
 
 namespace PC
 {
-    public class SI
+    public class Si
     {
-        public List<Unit> main;
-        public List<Unit> dochernie;
-        public SI()
+        public List<Unit> Main;
+        public List<Unit> Сhildren;
+        public Si()
         {
-            dochernie = new List<Unit>();
-            main = new List<Unit>();
+            Сhildren = new List<Unit>();
+            Main = new List<Unit>();
         }
     }
 }

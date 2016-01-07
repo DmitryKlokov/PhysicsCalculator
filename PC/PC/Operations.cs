@@ -4,8 +4,12 @@ namespace PC
 {
     public class Operations
     {
-        public List<Unit> lu;
-        public Unit result;
-        public Operations() { lu = new List<Unit>(); }
+        public List<Unit> Lu;
+        public Unit Result;
+
+        public Operations()
+        {
+            Lu = new List<Unit>();
+        }
     }
 }
