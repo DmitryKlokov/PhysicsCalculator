@@ -7,7 +7,7 @@ namespace PC
     public class Value
     {
         private double _value;
-        public List<Unit> Unit ;
+        public List<Unit> Unit;
 
         public static Value operator +(Value vLeft, Value vRight)
         {
@@ -66,12 +66,14 @@ namespace PC
             {
                 return v;
             }
-            foreach (var t in Program.LSi.Where(t => t.Сhildren.Any(s => s.Value == v.Unit[0].Value)))
+            foreach (var si in Program.LSi)
             {
-                //если нашлось то переводим
-                //надо добавить правило перевода!!!
-                v.Unit = t.Main;
-                return v;
+                foreach (var child in si.Сhildren.Where(child => child.Value == v.Unit[0].Value))
+                {
+                    v.Unit = si.Main;
+                    v._value = v._value * Math.Pow(child.ConvertValue, v.Unit[0].Degree);
+                    return v;
+                }
             }
             return v;
         }

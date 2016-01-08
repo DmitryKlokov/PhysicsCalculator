@@ -4,16 +4,16 @@
   <Operations>
     <Lu>
 		  <Unit>
-			  <Value>Metr</Value>
+			  <Value>Метр</Value>
 			  <Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Sek</Value>
-        <Degree>-1</Degree>
+			<Value>Секунда</Value>
+			<Degree>-1</Degree>
 		  </Unit>
     </Lu>
     <Result>
-      <Value>Metr/Sek</Value>
+      <Value>Метр/Секунда</Value>
       <Degree>1</Degree>
     </Result>
   </Operations>
@@ -21,16 +21,16 @@
   <Operations>
     <Lu>
 		  <Unit>
-        <Value>Metr</Value>
-        <Degree>1</Degree>
+			<Value>Метр</Value>
+			<Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Metr/Sek</Value>
+        <Value>Метр/Секунда</Value>
         <Degree>-1</Degree>
 		  </Unit>
     </Lu>
     <Result>
-      <Value>Sek</Value>
+      <Value>Секунда</Value>
       <Degree>1</Degree>
     </Result>
   </Operations>
@@ -38,16 +38,16 @@
   <Operations>
     <Lu>
 		  <Unit>
-        <Value>Sek</Value>
-        <Degree>1</Degree>
+			<Value>Секунда</Value>
+			<Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Metr/Sek</Value>
-        <Degree>1</Degree>
+			<Value>Метр/Секунда</Value>
+			<Degree>1</Degree>
 		  </Unit>
     </Lu>
     <Result>
-      <Value>Metr</Value>
+      <Value>Метр</Value>
       <Degree>1</Degree>
     </Result>
   </Operations>
@@ -55,16 +55,16 @@
   <Operations>
     <Lu>
 		  <Unit>
-        <Value>Sek</Value>
-        <Degree>1</Degree>
+			<Value>Секунда</Value>
+			<Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Metr/Sek</Value>
-        <Degree>1</Degree>
+			<Value>Метр/Секунда</Value>
+			<Degree>1</Degree>
 		  </Unit>
 	  </Lu>
     <Result>
-      <Value>Sek</Value>
+      <Value>Секунда</Value>
       <Degree>-1</Degree>
     </Result>
   </Operations>
@@ -72,20 +72,20 @@
   <Operations>
     <Lu>
 		  <Unit>
-        <Value>Kgram</Value>
-        <Degree>1</Degree>
+			<Value>Килограмм</Value>
+			<Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Metr/Sek</Value>
-        <Degree>1</Degree>
+			<Value>Метр/Секунда</Value>
+			<Degree>1</Degree>
 		  </Unit>
 		  <Unit>
-        <Value>Sek</Value>
-        <Degree>-1</Degree>
+			<Value>Секунда</Value>
+			<Degree>-1</Degree>
 		  </Unit>
     </Lu>
     <Result>
-      <Value>Nioton</Value>
+      <Value>Ньютон</Value>
       <Degree>1</Degree>
     </Result>
   </Operations>

@@ -1,84 +1,67 @@
 <?xml version="1.0"?>
 <ArrayOfSI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <Si>
+    <Main>
+      <Unit>
+        <Value>Секунда</Value>
+        <Degree>1</Degree>
+        <ConvertValue>1</ConvertValue>
+      </Unit>
+    </Main>
+    <Сhildren>
+      <Unit>
+        <Value>Минута</Value>
+        <Degree>1</Degree>
+        <ConvertValue>60</ConvertValue>
+      </Unit>
+	  <Unit>
+        <Value>Час</Value>
+        <Degree>1</Degree>
+        <ConvertValue>360</ConvertValue>
+      </Unit>
+    </Сhildren>
+  </Si>
   
-  <SI>
+  <Si>
     <Main>
-		  <Unit>
-        <Value>Metr</Value>
-			  <Degree>1</Degree>
-		  </Unit>
+      <Unit>
+        <Value>Метр</Value>
+        <Degree>1</Degree>
+        <ConvertValue>1</ConvertValue>
+      </Unit>
     </Main>
     <Сhildren>
-		  <Unit>
-        <Value>KMetr</Value>
+      <Unit>
+        <Value>Километр</Value>
         <Degree>1</Degree>
-		  </Unit>
-		  <Unit>
-        <Value>SMetr</Value>
+        <ConvertValue>1000</ConvertValue>
+      </Unit>
+    </Сhildren>
+	<Сhildren>
+      <Unit>
+        <Value>Сантиметр</Value>
         <Degree>1</Degree>
-		  </Unit>
-    </Сhildren>	
-  </SI>	
-
-  <SI>
+        <ConvertValue>0.01</ConvertValue>
+      </Unit>
+    </Сhildren>
+  </Si>
+  
+  <Si>
     <Main>
-		  <Unit>
-        <Value>Kgram</Value>
+      <Unit>
+        <Value>Килограмм</Value>
         <Degree>1</Degree>
-		  </Unit>
+        <ConvertValue>1</ConvertValue>
+      </Unit>
     </Main>
     <Сhildren>
-		  <Unit>
-        <Value>Gram</Value>
+      <Unit>
+        <Value>Грамм</Value>
         <Degree>1</Degree>
-		  </Unit>
-		  <Unit>
-        <Value>Tonna</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Сhildren>	
-</SI>	
-
-	<SI>
-
-    <Main>
-		  <Unit>
-        <Value>Metr/Sek</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Main>
-    <Сhildren>
-		  <Unit>
-        <Value>KMetr/H</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Сhildren>	
-</SI>
-
-	<SI>
-    <Main>
-		  <Unit>
-        <Value>Sek</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Main>
-    <Сhildren>
-		  <Unit>
-        <Value>H</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Сhildren>	
-  </SI>
-
-	<SI>
-    <Main>
-		  <Unit>
-			  <Value>Nioton</Value>
-        <Degree>1</Degree>
-		  </Unit>
-    </Main>
-    <Сhildren>
-    </Сhildren>	
-  </SI>
+        <ConvertValue>0.001</ConvertValue>
+      </Unit>
+    </Сhildren>
+  </Si>
   
 </ArrayOfSI>
